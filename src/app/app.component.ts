@@ -31,7 +31,7 @@ export class AppComponent {
     this.host0 = window.location.hostname;
 
     this.date = new Date().toLocaleString();
-    this.url1 = `http://${window.location.hostname}:120/`;
+    this.url1 = `http://${window.location.hostname}:30007/`;
     this.http.get<any>(this.url1).subscribe(data1 => {
       this.datos1 = data1;
       this.host1 = this.datos1.hostName;
@@ -41,7 +41,7 @@ export class AppComponent {
       this.count = this.datos1.count;
       this.fecha = new Date(this.datos1.dateAndtime.replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$2/$1/$3'));;
     });
-    this.url2 = `http://${window.location.hostname}:90/`;
+    this.url2 = `http://${window.location.hostname}:30008/`;
     this.http.get<any>(this.url2).subscribe(data2 => {
       this.datos2 = data2;
       this.author = this.datos2.autor;
