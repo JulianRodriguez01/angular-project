@@ -44,7 +44,7 @@ export class AppComponent {
     this.url2 = `http://${window.location.hostname}:30008/`;
     this.http.get<any>(this.url2).subscribe(data2 => {
       this.datos2 = data2;
-      this.author = this.datos2.autor;
+      this.author = this.datos2.author;
       this.status = this.datos2.state;
       this.host2 = this.datos2.hostName;
       this.fecha2 = new Date(this.datos2.dateAndtime.replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$2/$1/$3'));;
